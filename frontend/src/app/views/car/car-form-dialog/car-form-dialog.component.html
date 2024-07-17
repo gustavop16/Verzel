@@ -1,0 +1,30 @@
+<h1 mat-dialog-title align="center" >Novo Carro</h1>
+<div mat-dialog-content>
+    <form [formGroup]="carForm" class="example-form" align="center">
+        <mat-form-field class="example-full-width">
+            <mat-label>Marca</mat-label>
+            <input matInput placeholder="" formControlName="brand" name="brand">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Modelo</mat-label>
+            <input matInput placeholder="" formControlName="model" name="model">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Ano</mat-label>
+            <input matInput placeholder="" formControlName="year" name="year" minlength="4" maxlength="4">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Preço R$</mat-label>
+            <input matInput placeholder="" formControlName="price" name="price">
+        </mat-form-field>     
+        <mat-form-field class="example-full-width">
+            <mat-label>Quilometragem</mat-label>
+            <input matInput placeholder="" formControlName="mileage" name="mileage">
+        </mat-form-field>    
+    </form>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="primary" [disabled]="carForm.invalid" (click)="save()">Salvar</button>
+</div>

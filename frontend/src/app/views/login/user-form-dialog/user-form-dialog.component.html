@@ -1,0 +1,23 @@
+<h1 mat-dialog-title align="center" >Novo Usuário</h1>
+<div mat-dialog-content>
+    <form [formGroup]="userForm" class="example-form" align="center">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="" formControlName="name" name="name">
+        </mat-form-field>
+      
+        <mat-form-field  class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" name="email" placeholder="Ex. email@example.com">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Senha</mat-label>
+            <input type="password" matInput formControlName="password" name="password">
+          </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="createUser()">Cadastrar</button>
+</div>

@@ -1,0 +1,23 @@
+<mat-card-content class="container">
+    <mat-card class="card-login">
+      <mat-card-title align="center">Login</mat-card-title>
+      <form [formGroup]="formLogin">
+        <mat-card-content class="conteudo-login">
+          <mat-form-field appearance="outline" class="form-field-full">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="Ex. perukas@example.com">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="form-field-full">
+            <mat-label>Senha</mat-label>
+            <input type="password" matInput formControlName="password" name="password">
+          </mat-form-field>
+        </mat-card-content>
+      </form>
+      <mat-card-actions align="end">
+        <button mat-button color="primary" class="full" align="end" (click)="logar()">Entrar</button>
+      </mat-card-actions>
+      <mat-card-actions align="end">
+        <button mat-button color="primary" class="full" align="end" (click)="addUser()">Cadastrar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-card-content>
